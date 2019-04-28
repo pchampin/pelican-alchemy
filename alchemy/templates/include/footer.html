@@ -11,6 +11,7 @@
     {% if tags|length %}
       <li class="list-inline-item"><a href="{{ SITEURL }}/{{ TAGS_URL or TAGS_SAVE_AS or 'tags.html' }}">Tags</a></li>
     {% endif %}
+    <li class="list-inline-item"><a href="{{ SITEURL }}/feeds/">Feeds</a></li>
   {% else %}
     {% for title, link in FOOTER_LINKS %}
     <li class="list-inline-item"><a href="{{ url(link) }}">{{ title }}</a></li>
