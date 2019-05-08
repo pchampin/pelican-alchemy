@@ -3,6 +3,14 @@
 {% block head %}
   {{ super() }}
   <meta name="description" content="{{ article.summary|striptags }}">
+
+  {% if HYPOTHESIS %}
+    <script type="application/json" class="js-hypothesis-config">{
+      "showHighlights": "whenSidebarOpen"
+    }</script>
+    <script src="https://hypothes.is/embed.js" async></script>
+  {% endif %}
+
 {% endblock %}
 
 {% block title %}
